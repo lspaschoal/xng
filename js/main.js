@@ -2,6 +2,16 @@ const METARS = new Map();
 const STATUS = new Map();
 const VIEW = new View();
 
+function exibirAviso() {
+  document.getElementById("aviso").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+
+function fecharAviso() {
+  document.getElementById("aviso").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+
 function atualizar() {
   fetch(
     `https://api-redemet.decea.mil.br/mensagens/metar/${DADOS.getAllIcao().join(
@@ -80,26 +90,4 @@ const fecharModal = () => {
   setInterval(atualizar, 60000);
 })();
 
-// document.addEventListener("keydown", function (event) {
-//   if (event.shiftKey && event.key === "F") {
-//     const element = document.getElementById("fla-logo");
-
-//     if (element.style.display === "hidden") {
-//       element.style.display = "block";
-//     } else {
-//       element.style.display = "hidden";
-//     }
-//   }
-// });
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "f") {
-    var element = document.getElementById("fla-logo");
-
-    if (element.style.display === "none") {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
-    }
-  }
-});
+exibirAviso();
