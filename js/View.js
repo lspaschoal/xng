@@ -106,7 +106,7 @@ class View {
       document.getElementById("metar_raw").textContent = "METAR indisponível";
     }
     await fetch(
-      `https://api-redemet.decea.mil.br/mensagens/taf/${status.icao}?api_key=6vmvTQDP1t8thEEAUkCCj4z4TRjrJLcb561p1SRi`
+      `https://api-redemet.decea.mil.br/mensagens/taf/${status.icao}?api_key=ct7nu9vzdwdAUV0uSwGvo2iqxGy2UBSM0f4TEAuZ`
     )
       .then((resp) => resp.json())
       .then((data) => {
