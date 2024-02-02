@@ -13,16 +13,50 @@
     <header>
       <img src="./img/logo.png" alt="logo" class="logo" />
       <h1>Condições Operacionais nos Aeroportos</h1>
-      <img
-        src="./img/logo-flamengo.png"
-        alt="logo"
-        class="logo"
-        id="fla-logo"
-      />
     </header>
     <div id="interface">
       <div id="painel"></div>
       <div class="overlay" id="overlay"></div>
+      <div class="modal" id="aviso">
+        <div><img src="./img/logo.png" alt="logo" class="logo-aviso" /></div>
+        <h1>
+          Bem-vindo ao Monitoramento de Condições Operacionais da XNG Aviation!
+        </h1>
+        <p>
+          Esta página compara as condições meteorológicas obtidas através de
+          METAR com os mínimos meteorológicos dos procedimentos publicados para
+          cada aeródromo cadastrado, e classifica a operacionalidade de acordo
+          com esses parâmetros. Clicando em carda card, pode-se consultar a
+          mensagem de METAR/SPECI atual, TAF, e os valores dos mínimos
+          considerados.
+        </p>
+        <p>
+          Cada card exibe as informações de visibilidade, teto, vento,
+          cabeceiras e procedimentos disponíveis, e ícones de alerta para
+          presença de fenômenos como chuva, trovoada e rajadas de vento.
+        </p>
+        <p>
+          <b
+            >Por depender da publicação de um METAR/SPECI, essas informações
+            podem estar desatualizadas.</b
+          >
+          Além disso, a condição real de um aeródromo é definida pelo órgão ATC
+          local, e por esse motivo algumas divergências podem ocorrer.
+        </p>
+        <p>
+          Esta ferramenta tem como objetivo auxiliar no monitoramento e
+          contribuir para o aumento da consciência situacional na operação.
+          <br />
+          <b
+            >Ela não isenta Pilotos ou Despachantes Operacionais de Voo de
+            consultar a meteorologia atual durante a realização de suas
+            funções.</b
+          >
+        </p>
+        <div class="div-botao-aviso">
+          <button class="botao-aviso" onclick="fecharAviso()">OK</button>
+        </div>
+      </div>
       <div class="modal" id="modal">
         <img
           src="./img/close-button.png"
